@@ -5,6 +5,7 @@ import { Hero } from '@/components/home/hero/Hero';
 import { Projects } from '@/components/home/projects/Projects';
 import { Heading } from '@/components/nav/Heading';
 import { SideBar } from '@/components/nav/SideBar';
+import { Education } from '@/components/home/education/Education';
 import { useTranslations } from 'next-intl';
 import styles from './home.module.scss';
 
@@ -18,8 +19,9 @@ export default function Index() {
           <Heading />
           <Hero />
           <About />
+          <Education />
           <Experience />
-          <Projects />
+          {/* <Projects /> */}
           <Contact />
           <div
             style={{
