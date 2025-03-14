@@ -14,10 +14,20 @@
   margin: 4.8rem 0;
 }
 
+.titleContainer {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+.titleWrapper {
+  position: relative;
+}
+
 .title {
   font-size: var(--text-2xl);
   font-weight: 900;
   line-height: 1.1;
+  position: relative;
 
   span {
     color: var(--brand);
@@ -25,6 +35,24 @@
 
   @media (max-width: 768px) {
     font-size: var(--text-xl);
+  }
+}
+.title2 {
+  font-size: var(--text-xl);
+  font-weight: 200;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(20%);
+  white-space: nowrap;
+  margin-bottom: -30px;
+
+  span {
+    color: var(--brand);
+  }
+
+  @media (max-width: 1150px) {
+    display: none;
   }
 }
 
