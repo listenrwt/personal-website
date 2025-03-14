@@ -20,7 +20,7 @@ export default function LocaleLayout({ children }: { children: JSX.Element }) {
   return (
     <html lang={locale} className={poppins.className}>
       <Head>
-        <title>Winter Lau</title>
+        <title>Winter Lau (ListenRwT)</title>
         <meta name='description' content='Bleep boop' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
