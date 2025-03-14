@@ -22,7 +22,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    translate: -50% 20%;
+    translate: -50% 0%;
 
     transition: 0.25s all;
 
@@ -91,4 +91,23 @@
   color: var(--brand);
 
   margin: 0.8rem 0;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: var(--text-xs);
+    color: var(--brand);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }

@@ -37,6 +37,16 @@ export const ProjectModal = ({
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const rootElement = document.createElement('div');
+    rootElement.setAttribute('id', 'modal-root');
+    document.body.appendChild(rootElement);
+
+    return () => {
+      document.body.removeChild(rootElement);
+    };
+  }, []);
+
   const content = (
     <div className={styles.modal} onClick={() => setIsOpen(false)}>
       <button className={styles.closeModalBtn}>
@@ -65,12 +75,16 @@ export const ProjectModal = ({
               Project Links<span>.</span>
             </p>
             <div className={styles.links}>
-              <Link target='_blank' rel='nofollow' href={code}>
-                <AiFillGithub /> source code
-              </Link>
-              <Link target='_blank' rel='nofollow' href={projectLink}>
-                <AiOutlineExport /> live project
-              </Link>
+              {code && (
+                <Link target='_blank' rel='nofollow' href={code}>
+                  <AiFillGithub /> source code
+                </Link>
+              )}
+              {projectLink && (
+                <Link target='_blank' rel='nofollow' href={projectLink}>
+                  <AiOutlineExport /> live project
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -80,6 +94,10 @@ export const ProjectModal = ({
 
   if (!isOpen) return <></>;
 
-  // @ts-ignore
-  return ReactDOM.createPortal(content, document.getElementById('root'));
+  const rootElement = document.getElementById('modal-root');
+  if (!rootElement) {
+    return null;
+  }
+
+  return ReactDOM.createPortal(content, rootElement);
 };

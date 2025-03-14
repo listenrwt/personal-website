@@ -59,13 +59,25 @@ export const Project = ({
           onMouseLeave={() => setHovered(false)}
           onClick={() => setIsOpen(true)}
           className={styles.projectImage}
+          style={{
+            transform: hovered
+              ? 'scale(1.01) rotate(1deg)'
+              : 'scale(1) rotate(0deg)',
+            transition: 'all 0.3s ease-in-out',
+          }}
         >
           <img
             src={imgSrc}
             alt={`An image of the ${title} project.`}
             style={{
-              width: hovered ? '90%' : '85%',
-              rotate: hovered ? '2deg' : '0deg',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              transform: hovered
+                ? 'scale(1.05) rotate(2deg)'
+                : 'scale(1) rotate(0deg)',
+              transition: 'all 0.3s ease-in-out',
             }}
           />
         </div>
@@ -74,14 +86,16 @@ export const Project = ({
             <div className={styles.projectTitle}>
               <h4>{title}</h4>
               <div className={styles.projectTitleLine} />
-
-              <Link href={code} target='_blank' rel='nofollow'>
-                <AiFillGithub size='2.8rem' />
-              </Link>
-
-              <Link href={projectLink} target='_blank' rel='nofollow'>
-                <AiOutlineExport size='2.8rem' />
-              </Link>
+              {code && (
+                <Link href={code} target='_blank' rel='nofollow'>
+                  <AiFillGithub size='2.8rem' />
+                </Link>
+              )}
+              {projectLink && (
+                <Link href={projectLink} target='_blank' rel='nofollow'>
+                  <AiOutlineExport size='2.8rem' />
+                </Link>
+              )}
             </div>
           </Reveal>
           <Reveal>
