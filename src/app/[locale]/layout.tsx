@@ -9,24 +9,18 @@ const poppins = Poppins({
   weight: ['100', '200', '400', '700', '900'],
   subsets: ['latin'],
 });
-export default function LocaleLayout({
-  children,
-  params,
-}: {
-  children: JSX.Element;
-  params: { locale: string };
-}) {
+export default function LocaleLayout({ children }: { children: JSX.Element }) {
   const locale = useLocale();
 
   // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
+  /*   if (params.locale !== locale) {
     notFound();
-  }
+  } */
 
   return (
     <html lang={locale} className={poppins.className}>
       <Head>
-        <title>Bob Ross | Web Developer</title>
+        <title>Winter Lau</title>
         <meta name='description' content='Bleep boop' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
