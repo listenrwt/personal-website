@@ -33,6 +33,8 @@ export const Contact = () => {
               <span>1155194687@link.cuhk.edu.hk</span>
             </div>
           </Link>
+        </Reveal>
+        <Reveal width='100%'>
           <Link href='mailto:listenrwt@gmail.com'>
             <div className={styles.contactEmail}>
               <AiFillMail size='2.4rem' />

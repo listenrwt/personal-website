@@ -31,8 +31,10 @@ export const EdcuationItem = ({
 
       <div className={styles.heading}>
         <Reveal>
-          <span className={styles.degree}>{major}</span>
-          <span>{minor}</span>
+          <>
+            <span className={styles.degree}>{major}</span>
+            <span>{minor}</span>
+          </>
         </Reveal>
       </div>
       <Reveal>
