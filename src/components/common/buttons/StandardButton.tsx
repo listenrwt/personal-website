@@ -1,5 +1,5 @@
-import { MouseEventHandler } from "react";
-import styles from "./standardbutton.module.scss";
+import { JSX, MouseEventHandler } from 'react';
+import styles from './standardbutton.module.scss';
 
 interface Props {
   children: string | JSX.Element;

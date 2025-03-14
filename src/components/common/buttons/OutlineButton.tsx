@@ -1,5 +1,5 @@
-import { MouseEventHandler } from "react";
-import styles from "./outlinebutton.module.scss";
+import { JSX, MouseEventHandler } from 'react';
+import styles from './outlinebutton.module.scss';
 
 interface Props {
   children: string | JSX.Element;

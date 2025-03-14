@@ -1,10 +1,10 @@
-import styles from "./projectmodal.module.scss";
-import { useEffect } from "react";
-import ReactDOM from "react-dom";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
-import { MdClose } from "react-icons/md";
+import styles from './projectmodal.module.scss';
+import { JSX, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { AiFillGithub, AiOutlineExport } from 'react-icons/ai';
+import { MdClose } from 'react-icons/md';
 
 interface Props {
   isOpen: boolean;
@@ -28,12 +28,12 @@ export const ProjectModal = ({
   tech,
 }: Props) => {
   useEffect(() => {
-    const body = document.querySelector("body");
+    const body = document.querySelector('body');
 
     if (isOpen) {
-      body!.style.overflowY = "hidden";
+      body!.style.overflowY = 'hidden';
     } else {
-      body!.style.overflowY = "scroll";
+      body!.style.overflowY = 'scroll';
     }
   }, [isOpen]);
 
@@ -56,7 +56,7 @@ export const ProjectModal = ({
         />
         <div className={styles.modalContent}>
           <h4>{title}</h4>
-          <div className={styles.modalTech}>{tech.join(" - ")}</div>
+          <div className={styles.modalTech}>{tech.join(' - ')}</div>
 
           <div className={styles.suppliedContent}>{modalContent}</div>
 
@@ -65,10 +65,10 @@ export const ProjectModal = ({
               Project Links<span>.</span>
             </p>
             <div className={styles.links}>
-              <Link target="_blank" rel="nofollow" href={code}>
+              <Link target='_blank' rel='nofollow' href={code}>
                 <AiFillGithub /> source code
               </Link>
-              <Link target="_blank" rel="nofollow" href={projectLink}>
+              <Link target='_blank' rel='nofollow' href={projectLink}>
                 <AiOutlineExport /> live project
               </Link>
             </div>
@@ -81,5 +81,5 @@ export const ProjectModal = ({
   if (!isOpen) return <></>;
 
   // @ts-ignore
-  return ReactDOM.createPortal(content, document.getElementById("root"));
+  return ReactDOM.createPortal(content, document.getElementById('root'));
 };
