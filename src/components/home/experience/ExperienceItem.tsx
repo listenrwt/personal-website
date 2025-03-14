@@ -1,5 +1,5 @@
-import { Reveal } from "@/components/common/Reveal";
-import styles from "./experience.module.scss";
+import { Reveal } from '@/components/common/Reveal';
+import styles from './experience.module.scss';
 
 interface Props {
   title: string;
@@ -22,7 +22,7 @@ export const ExperienceItem = ({
     <div className={styles.experience}>
       <div className={styles.heading}>
         <Reveal>
-          <span className={styles.title}>{title}</span>
+          <span className={styles.position}>{position}</span>
         </Reveal>
         <Reveal>
           <span>{time}</span>
@@ -31,7 +31,7 @@ export const ExperienceItem = ({
 
       <div className={styles.heading}>
         <Reveal>
-          <span className={styles.position}>{position}</span>
+          <span className={styles.title}>{title}</span>
         </Reveal>
         <Reveal>
           <span>{location}</span>
@@ -43,7 +43,7 @@ export const ExperienceItem = ({
       <Reveal>
         <div className={styles.tech}>
           {tech.map((item) => (
-            <span key={item} className="chip">
+            <span key={item} className='chip'>
               {item}
             </span>
           ))}
