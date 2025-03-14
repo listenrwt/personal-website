@@ -1,13 +1,8 @@
-"use client";
-import styles from "./headinglinks.module.scss";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillTwitterCircle,
-  AiFillCodepenCircle,
-} from "react-icons/ai";
-import Link from "next/link";
-import { motion } from "framer-motion";
+'use client';
+import styles from './headinglinks.module.scss';
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export const MyLinks = () => {
   return (
@@ -18,11 +13,11 @@ export const MyLinks = () => {
         transition={{ duration: 0.5, delay: 0.0 }}
       >
         <Link
-          href="https://www.linkedin.com/in/alex-lam-724992152/"
-          target="_blank"
-          rel="nofollow"
+          href='https://www.linkedin.com/in/winter-lau-b8406a260/'
+          target='_blank'
+          rel='nofollow'
         >
-          <AiFillLinkedin size="2.4rem" />
+          <AiFillLinkedin size='2.4rem' />
         </Link>
       </motion.span>
 
@@ -32,11 +27,11 @@ export const MyLinks = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Link
-          href="https://www.github.com/alexlam184"
-          target="_blank"
-          rel="nofollow"
+          href='https://github.com/listenrwt'
+          target='_blank'
+          rel='nofollow'
         >
-          <AiFillGithub size="2.4rem" />
+          <AiFillGithub size='2.4rem' />
         </Link>
       </motion.span>
     </div>

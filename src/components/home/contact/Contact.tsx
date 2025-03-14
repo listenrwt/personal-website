@@ -1,36 +1,42 @@
-"use client";
-import { Reveal } from "@/components/common/Reveal";
-import styles from "./contact.module.scss";
-import { AiFillMail } from "react-icons/ai";
-import Link from "next/link";
+'use client';
+import { Reveal } from '@/components/common/Reveal';
+import styles from './contact.module.scss';
+import { AiFillMail } from 'react-icons/ai';
+import Link from 'next/link';
 
 export const Contact = () => {
   return (
-    <section className="section-wrapper" id="contact">
+    <section className='section-wrapper' id='contact'>
       <div className={styles.contactWrapper}>
-        <Reveal width="100%">
+        <Reveal width='100%'>
           <h4 className={styles.contactTitle}>
             Contact<span>.</span>
           </h4>
         </Reveal>
-        <Reveal width="100%">
+        <Reveal width='100%'>
           <p className={styles.contactCopy}>
-            Shoot me an email if you want to connect! You can also find me on{" "}
+            Shoot me an email if you want to connect! You can also find me on{' '}
             <Link
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="nofollow"
+              href='https://www.linkedin.com/in/winter-lau-b8406a260/'
+              target='_blank'
+              rel='nofollow'
             >
               Linkedin
-            </Link>{" "}
+            </Link>{' '}
             if that&apos;s more your speed.
           </p>
         </Reveal>
-        <Reveal width="100%">
-          <Link href="mailto:lamalex0211@gmail.com">
+        <Reveal width='100%'>
+          <Link href='mailto:1155194687@link.cuhk.edu.hk'>
             <div className={styles.contactEmail}>
-              <AiFillMail size="2.4rem" />
-              <span>lamalex0211@gmail.com</span>
+              <AiFillMail size='2.4rem' />
+              <span>1155194687@link.cuhk.edu.hk</span>
+            </div>
+          </Link>
+          <Link href='mailto:listenrwt@gmail.com'>
+            <div className={styles.contactEmail}>
+              <AiFillMail size='2.4rem' />
+              <span>listenrwt@gmail.com</span>
             </div>
           </Link>
         </Reveal>
