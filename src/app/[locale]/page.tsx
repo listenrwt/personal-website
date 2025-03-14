@@ -8,6 +8,7 @@ import { SideBar } from '@/components/nav/SideBar';
 import { Education } from '@/components/home/education/Education';
 import { useTranslations } from 'next-intl';
 import styles from './home.module.scss';
+import Head from 'next/head';
 
 export default function Index() {
   const t = useTranslations('Index');
@@ -18,10 +19,10 @@ export default function Index() {
         <main>
           <Heading />
           <Hero />
+          <Projects />
           <About />
           <Education />
           <Experience />
-          {/* <Projects /> */}
           <Contact />
           <div
             style={{

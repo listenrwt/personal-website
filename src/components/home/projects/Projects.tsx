@@ -1,12 +1,13 @@
-"use client";
-import { SectionHeader } from "@/components/common/SectionHeader";
-import { Project } from "./Project";
-import styles from "./projects.module.scss";
+'use client';
+import { SectionHeader } from '@/components/common/SectionHeader';
+import { Project } from './Project';
+import styles from './projects.module.scss';
+import Link from 'next/link';
 
 export const Projects = () => {
   return (
-    <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
+    <section className='section-wrapper' id='projects'>
+      <SectionHeader title='Projects' dir='l' />
 
       <div className={styles.projects}>
         {projects.map((project) => {
@@ -19,134 +20,143 @@ export const Projects = () => {
 
 const projects = [
   {
-    title: "Paint.app",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Flutter", "MUI", "Python", "FastAPI"],
+    title: 'SunnyQ',
+    imgSrc: 'SunnyQ.png',
+    code: 'https://github.com/alexlam184/sunnyq',
+    projectLink: 'https://sunnyq.vercel.app/host',
+    tech: ['NodeJS', 'TypeScript', 'React', 'Socket.IO', 'NextJS'],
     description:
-      "A real-time coaching app for students learning to paint. This app is my baby, designed and built on my own.",
+      'SunnyQ is an online quiz platform that enables teachers to host quizzes and share. Students can join the room and answer questions in real-time.',
+    modalContent: (
+      <>
+        <div className={styles.links}>
+          Host link:
+          <Link
+            target='_blank'
+            rel='nofollow'
+            href='https://sunnyq.vercel.app/host'
+          >
+            https://sunnyq.vercel.app/host
+          </Link>
+        </div>
+
+        <div className={styles.links}>
+          Client link:
+          <Link
+            target='_blank'
+            rel='nofollow'
+            href='https://sunnyq.vercel.app/client'
+          >
+            https://sunnyq.vercel.app/client
+          </Link>
+        </div>
+      </>
+    ),
+  },
+
+  {
+    title: 'Elma GPT',
+    imgSrc: 'elmagpt.png',
+    code: '',
+    projectLink: 'https://emla-chat-web.vercel.app/',
+    tech: ['NodeJS', 'TypeScript', 'React', 'Live2D', 'Microsoft Azure'],
+    description:
+      'Developed ElmaGPT during TurnedE! Intern, a Cantonese chatbot integrated with a Live2D model for an immersive user experience.',
     modalContent: (
       <>
         <p>
-          Pain.app is a real-time coaching app for students learning to paint.
-          This app is my baby, designed and built on my own.
-        </p>
-        <p>
-          The tech stack is based on top of Flutter for the mobile app,
-          connected to a Python & FastAPI backend, with data stored in Postgres,
-          deployed on Heroku.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          <b>ElmaGPT</b> is an innovative web application that enhances hardware
+          education through an interactive platform featuring a <b>Cantonese</b>{' '}
+          virtual teacher powered by the ChatGPT API and Microsoft Azure
+          Text-to-Voice. Students can ask hardware-related questions and receive
+          accurate, contextual answers.
         </p>
       </>
     ),
   },
   {
-    title: "The Canvas Club",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Node", "Express", "Postgres", "Kafka", "Redis"],
+    title: 'Recycler - Awarded Game',
+    imgSrc: 'recycler.png',
+    code: 'https://github.com/listenrwt/Recycler?tab=readme-ov-file',
+    projectLink: '',
+    tech: ['Unity', 'C#', 'Photoshop'],
     description:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      'Designed the award-winning game "Recycler" using the Unity Engine and C# independently within one week.',
     modalContent: (
       <>
         <p>
-          The Canvas Club is a social community for painters to connect with
-          others in their community.
+          Recycler is an award-winning electronic app game that challenges
+          players to test their recycling skills. In this game, players must
+          strategically place various types of rubbish in the correct recycling
+          bins while using special recycle logos to clear neighboring bins.
         </p>
         <p>
-          I work primarily on the backend, a collection of Node & Express
-          microservices. Data is stored primarily in Postgres & cached in Redis.
-        </p>
-        <p>
-          The team in total consists of 5 developers. This is a passion project
-          for all of us.
-        </p>
-        <p>
-          Because this isn&apos;t real, here&apos;s some gibberish to fill space{" "}
-          {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          The game was developed using Unity and C# and was awarded the{' '}
+          <b>Championship</b> of the "
+          <b>2021 Robofest Electronic App Game Design Competition</b>."
         </p>
       </>
     ),
   },
   {
-    title: "BrushWire",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["NextJS", "Java", "Spring", "AWS Aurora"],
+    title: 'Day and Night',
+    imgSrc: 'DayandNight.png',
+    code: 'https://github.com/listenrwt/Day-and-Night',
+    projectLink: 'https://listenrwt.itch.io/day-and-night',
+    tech: ['Unity', 'C#', 'Photoshop'],
     description:
-      "Think Zapier but for paint. Built with a team of four college friends and scaled to > 1 billion requests per day. This was a fun one.",
+      'Day and Night is a puzzle-platformer game where you must manipulate time to navigate through different environments and reach the gate.',
     modalContent: (
       <>
         <p>
-          Brush wire is essentially Zapier but for paint. Built with a team of
-          four college friends and scaled to {">"} 1 billion requests per day.
-          This was a fun one.
+          Welcome to Day and Night, a puzzle-platformer game where you must
+          manipulate time to navigate through different environments and reach
+          the gate.
         </p>
         <p>
-          Since &quot;Zapier for paint&quot; doesn&apos;t mean anything, be
-          creative {":)"}
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
-        </p>
-        <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          The game offers an engaging gameplay experience with its unique
+          mechanic of swapping between day and night.
         </p>
       </>
     ),
   },
   {
-    title: "Paint Reference 4",
-    imgSrc: "project-imgs/example-project.jpg",
-    code: "https://www.github.com",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    tech: ["Python", "FastAPI", "SQLAlchemy"],
+    title: 'Chinese Light Novel LLM',
+    imgSrc: 'LLM.png',
+    code: 'https://huggingface.co/listenrwt/chinese_light_novel_40k',
+    projectLink: '',
+    tech: ['Python', 'Unsloth', 'Ubuntu'],
     description:
-      "I couldn't think of another paint reference app, so here we are. I think you get the idea, right? Use your imagination 🌈",
+      'A chinese novel context generation model with over 400 downloads, finetuned with Unsloth.',
     modalContent: (
       <>
-        <p>Alright, you got me. I&apos;m all out of paint references.</p>
         <p>
-          Point is, use this space to explain a bit further WHAT this project
-          is, as well as what YOU contributed to it.
+          This model, listenrwt/chinese_light_novel_40k, is a fine-tuned version
+          of the llama3-8b base model. It has been trained using 40,000 pairs of
+          novel context data.
         </p>
-        <p>You get the idea. Now more lorem {":)"}</p>
+      </>
+    ),
+  },
+  {
+    title: 'Flippable Connect Five',
+    imgSrc: 'Connect5.jpg',
+    code: 'https://github.com/listenrwt/Flippable-Connect-Five',
+    projectLink: '',
+    tech: ['Unity', 'C#', 'Blender', 'PlasticSCM'],
+    description:
+      'Flippable Connect Five is a unique variation of the classic game Connect Four, developed for STEMP Educaton.',
+    modalContent: (
+      <>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-          quia officia odio nulla consectetur aperiam ad tempora magni magnam
-          nesciunt.
+          Flippable Connect Five is a unique variation of the classic game
+          Connect Four.
         </p>
         <p>
-          Fuga id sapiente facere ipsa eius exercitationem officiis deleniti,
-          rerum dolorum. Deserunt soluta modi culpa animi.
+          This game introduces exciting new gameplay elements that add strategic
+          depth and challenge to the traditional format.
         </p>
+        <p>The game can be played in two modes: two-player mode and AI mode.</p>
       </>
     ),
   },
