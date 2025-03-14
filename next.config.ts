@@ -4,5 +4,8 @@ const withNextIntl = require('next-intl/plugin')(
 );
 
 module.exports = withNextIntl({
-  ignoreDuringBuilds: true,
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 });
