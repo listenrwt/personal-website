@@ -6,6 +6,7 @@ import { Projects } from '@/components/home/projects/Projects';
 import { Heading } from '@/components/nav/Heading';
 import { SideBar } from '@/components/nav/SideBar';
 import { Education } from '@/components/home/education/Education';
+import { Achievement } from '@/components/home/achievement/Achievement';
 import { useTranslations } from 'next-intl';
 import styles from './home.module.scss';
 import Head from 'next/head';
@@ -23,6 +24,7 @@ export default function Index() {
           <About />
           <Education />
           <Experience />
+          <Achievement />
           <Contact />
           <div
             style={{
