@@ -8,4 +8,8 @@ module.exports = withNextIntl({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    NEXT_PUBLIC_ENCRYPTION_KEY: process.env.NEXT_PUBLIC_ENCRYPTION_KEY,
+    NEXT_PUBLIC_RESUME_PASSWORD: process.env.NEXT_PUBLIC_RESUME_PASSWORD,
+  },
 });
