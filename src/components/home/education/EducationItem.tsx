@@ -10,7 +10,7 @@ interface Props {
   courses: string[];
 }
 
-export const EdcuationItem = ({
+export const EducationItem = ({
   title,
   major,
   minor,

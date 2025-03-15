@@ -1,13 +1,13 @@
 'use client';
 import { SectionHeader } from '@/components/common/SectionHeader';
-import { EdcuationItem } from './EducationItem';
+import { EducationItem } from './EducationItem';
 
 export const Education = () => {
   return (
     <section className='section-wrapper' id='education'>
       <SectionHeader title='Education' dir='r' />
       {education.map((item) => (
-        <EdcuationItem key={item.title} {...item} />
+        <EducationItem key={item.title} {...item} />
       ))}
     </section>
   );
@@ -26,7 +26,7 @@ const education = [
       'Database Systems',
       'Machine Learning',
       'Algorithms',
-      'Operating Systems',
+      'OS',
     ],
   },
   {
