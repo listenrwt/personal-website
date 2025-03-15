@@ -21,7 +21,7 @@ export const Projects = () => {
 const projects = [
   {
     title: 'SunnyQ',
-    imgSrc: 'SunnyQ.png',
+    imgSrc: '/SunnyQ.png',
     code: 'https://github.com/alexlam184/sunnyq',
     projectLink: 'https://sunnyq.vercel.app/host',
     tech: ['NodeJS', 'TypeScript', 'React', 'Socket.IO', 'NextJS'],
@@ -56,7 +56,7 @@ const projects = [
 
   {
     title: 'Elma GPT',
-    imgSrc: 'elmagpt.png',
+    imgSrc: '/elmagpt.png',
     code: '',
     projectLink: 'https://emla-chat-web.vercel.app/',
     tech: ['NodeJS', 'TypeScript', 'React', 'Live2D', 'Microsoft Azure'],
@@ -76,9 +76,9 @@ const projects = [
   },
   {
     title: 'Recycler - Awarded Game',
-    imgSrc: 'recycler.png',
+    imgSrc: '/recycler.png',
     code: 'https://github.com/listenrwt/Recycler?tab=readme-ov-file',
-    projectLink: '',
+    projectLink: '/games/recycler',
     tech: ['Unity', 'C#', 'Photoshop'],
     description:
       'Designed the award-winning game "Recycler" using the Unity Engine and C# independently within one week.',
@@ -100,7 +100,7 @@ const projects = [
   },
   {
     title: 'Day and Night',
-    imgSrc: 'DayandNight.png',
+    imgSrc: '/DayandNight.png',
     code: 'https://github.com/listenrwt/Day-and-Night',
     projectLink: 'https://listenrwt.itch.io/day-and-night',
     tech: ['Unity', 'C#', 'Photoshop'],
@@ -122,7 +122,7 @@ const projects = [
   },
   {
     title: 'Chinese Light Novel LLM',
-    imgSrc: 'LLM.png',
+    imgSrc: '/LLM.png',
     code: 'https://huggingface.co/listenrwt/chinese_light_novel_40k',
     projectLink: '',
     tech: ['Python', 'Unsloth', 'Ubuntu'],
@@ -140,7 +140,7 @@ const projects = [
   },
   {
     title: 'Flippable Connect Five',
-    imgSrc: 'Connect5.jpg',
+    imgSrc: '/Connect5.jpg',
     code: 'https://github.com/listenrwt/Flippable-Connect-Five',
     projectLink: '',
     tech: ['Unity', 'C#', 'Blender', 'PlasticSCM'],

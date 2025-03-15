@@ -1,0 +1,111 @@
+.gamesPage {
+  min-height: 100vh;
+  background: var(--background-color);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  //padding: 2rem 0;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: var(--brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.gameCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 320px;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+
+    .gameOverlay {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.gameContent {
+  padding: 1rem 1.75rem;
+
+  h3 {
+    font-weight: bold;
+    font-size: var(--text-md);
+    color: var(--brand);
+    flex-shrink: 0;
+    padding-bottom: 0.5rem;
+    text-decoration: underline;
+    max-width: calc(100% - 150px);
+  }
+
+  p {
+    display: inline-block;
+
+    font-size: var(--text-xs);
+    font-weight: 400;
+
+    cursor: pointer;
+  }
+}
+
+.gameOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .playButton {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--accent-color-hover);
+    }
+  }
+}
+

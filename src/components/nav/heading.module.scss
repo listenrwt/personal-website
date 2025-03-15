@@ -18,4 +18,58 @@
   @media (max-width: 768px) {
     padding: 0 2.4rem;
   }
+
+
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    
+    a {
+      color: var(--text);
+      text-decoration: none;
+        font-size: var(--text-sm);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--brand);
+      }
+    }
+
+    .active {
+      color: var(--brand);
+    }
+  .logo {
+  flex-shrink: 0;
+
+  font-size: var(--text-md);
+  font-weight: 900;
+  line-height: 1;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--background);
+  border-radius: 4px;
+
+
+  span {
+    font-size: var(--text-md);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--brand);
+  }
 }
+  }
+
+  .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
