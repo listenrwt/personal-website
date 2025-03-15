@@ -22,17 +22,9 @@ export const Contact = () => {
               rel='nofollow'
             >
               Linkedin
-            </Link>{' '}
+            </Link>
             if that&apos;s more your speed.
           </p>
-        </Reveal>
-        <Reveal width='100%'>
-          <Link href='mailto:1155194687@link.cuhk.edu.hk'>
-            <div className={styles.contactEmail}>
-              <AiFillMail size='2.4rem' />
-              <span>1155194687@link.cuhk.edu.hk</span>
-            </div>
-          </Link>
         </Reveal>
         <Reveal width='100%'>
           <Link href='mailto:listenrwt@gmail.com'>
