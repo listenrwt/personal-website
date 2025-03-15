@@ -46,8 +46,12 @@ export default function Games() {
                 <div className={styles.gameCard}>
                   <img src={game.thumbnail} alt={game.title} />
                   <div className={styles.gameContent}>
-                    <h3>{game.title}</h3>
-                    <p>{game.description}</p>
+                    <Reveal>
+                      <h3>{game.title}</h3>
+                    </Reveal>
+                    <Reveal>
+                      <p>{game.description}</p>
+                    </Reveal>
                   </div>
                   <div className={styles.gameOverlay}>
                     <span className={styles.playButton}>Play Now</span>
