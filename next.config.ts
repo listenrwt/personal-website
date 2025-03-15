@@ -9,7 +9,7 @@ module.exports = withNextIntl({
     ignoreDuringBuilds: true,
   },
   env: {
-    NEXT_PUBLIC_ENCRYPTION_KEY: process.env.NEXT_PUBLIC_ENCRYPTION_KEY,
-    NEXT_PUBLIC_RESUME_PASSWORD: process.env.NEXT_PUBLIC_RESUME_PASSWORD,
+    ENCRYPTION_KEY: process.env.ENCRYPTION_KEY,
+    RESUME_PASSWORD: process.env.RESUME_PASSWORD,
   },
 });

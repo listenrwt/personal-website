@@ -3,7 +3,7 @@ import { decrypt } from '@/utils/crypto';
 import fs from 'fs';
 import path from 'path';
 
-const CORRECT_PASSWORD = process.env.NEXT_PUBLIC_RESUME_PASSWORD;
+const CORRECT_PASSWORD = process.env.RESUME_PASSWORD;
 
 export async function POST(req: NextRequest) {
   try {
