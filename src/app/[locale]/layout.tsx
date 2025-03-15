@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import { JSX } from 'react';
+import CursorEffect from '@/components/common/CursorEffect';
 
 const poppins = Poppins({
   weight: ['100', '200', '400', '700', '900'],
@@ -25,6 +26,7 @@ export default function LocaleLayout({ children }: { children: JSX.Element }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <CursorEffect />
       <body>{children}</body>
     </html>
   );
