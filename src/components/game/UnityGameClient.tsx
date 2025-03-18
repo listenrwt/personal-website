@@ -9,12 +9,12 @@ const GAME_CONFIGS = {
     frameworkUrl: '/unity/recycler/Build/recycler.framework.js',
     codeUrl: '/unity/recycler/Build/recycler.wasm',
   },
-  /*   dayandnight: {
-    loaderUrl: '/unity/dayandnight/Build/dayandnight.loader.js',
-    dataUrl: '/unity/dayandnight/Build/dayandnight.data',
-    frameworkUrl: '/unity/dayandnight/Build/dayandnight.framework.js',
-    codeUrl: '/unity/dayandnight/Build/dayandnight.wasm',
-  }, */
+  dayandnight: {
+    loaderUrl: '/unity/Day_and_Night/Build/Day_and_Night.loader.js',
+    dataUrl: '/unity/Day_and_Night/Build/Day_and_Night.data',
+    frameworkUrl: '/unity/Day_and_Night/Build/Day_and_Night.framework.js',
+    codeUrl: '/unity/Day_and_Night/Build/Day_and_Night.wasm',
+  },
 };
 
 interface UnityGameClientProps {

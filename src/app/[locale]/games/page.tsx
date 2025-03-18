@@ -20,12 +20,12 @@ const games: GameCard[] = [
       'An award-winning recycling education game that teaches players about environmental sustainability through interactive challenges.',
     thumbnail: '/recycler.png',
   },
-  /*   {
+  {
     id: 'dayandnight',
-    title: 'Day and Night',
+    title: 'Day_and_Night',
     description: 'A puzzle-platformer with time manipulation mechanics',
-    thumbnail: '/images/games/DayandNight.png',
-  }, */
+    thumbnail: '/DayandNight.png',
+  },
 ];
 
 export default function Games() {
