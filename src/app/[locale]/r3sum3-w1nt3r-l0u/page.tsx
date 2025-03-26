@@ -1,59 +1,58 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './resume.module.scss';
 import { Reveal } from '@/components/common/Reveal';
 import { Heading } from '@/components/nav/Heading';
 
 export default function ResumePage() {
-  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [pdfUrl, setPdfUrl] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+  useEffect(() => {
+    const fetchDecryptedResume = async () => {
+      try {
+        // Use the GET endpoint that directly decrypts the resume
+        const response = await fetch('/api/resume');
 
-    try {
-      const response = await fetch('/api/resume', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
-      });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-      if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
-        window.open(url, '_blank');
-      } else {
-        setError('Invalid password');
+        setPdfUrl(url);
+      } catch (err) {
+        console.error('Error fetching resume:', err);
+        setError('Failed to load the resume. Please try again later.');
+      } finally {
+        setLoading(false);
       }
-    } catch (err) {
-      setError('An error occurred');
-    }
-    setLoading(false);
-  };
+    };
+
+    fetchDecryptedResume();
+
+    // Clean up blob URL when component unmounts
+    return () => {
+      if (pdfUrl) {
+        window.URL.revokeObjectURL(pdfUrl);
+      }
+    };
+  }, []);
 
   return (
     <>
       <Heading />
       <div className={styles.container}>
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <Reveal>
-            <h1>Protected Resume</h1>
-          </Reveal>
-          <input
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder='Enter password'
-            disabled={loading}
-          />
+        <div className={styles.pdfContainer}>
+          {loading && <div className={styles.loading}>Loading resume...</div>}
+
           {error && <p className={styles.error}>{error}</p>}
-          <button type='submit' disabled={loading}>
-            {loading ? 'Loading...' : 'View Resume'}
-          </button>
-        </form>
+
+          {pdfUrl && !loading && (
+            <iframe src={pdfUrl} className={styles.pdfViewer} title='Resume' />
+          )}
+        </div>
       </div>
     </>
   );
